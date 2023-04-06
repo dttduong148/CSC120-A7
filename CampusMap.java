@@ -13,6 +13,7 @@ public class CampusMap {
      * Adds a Building to the map
      * @param b the Building to add
      */
+
     public void addBuilding(Building b) {
         System.out.println("Adding building...");
         buildings.add(b);
@@ -44,6 +45,18 @@ public class CampusMap {
         CampusMap myMap = new CampusMap();
         myMap.addBuilding(new Building("Ford Hall", "100 Green Street Northampton, MA 01063", 4));
         myMap.addBuilding(new Building("Bass Hall", "4 Tyler Court Northampton, MA 01063", 4));
+        
+        myMap.addBuilding(new Building("Sabin-Reed", "44 College Ln, Northampton, MA 01063", 4));
+        myMap.addBuilding(new Building("Ainsworth Gym", "102 Lower College Ln, Northampton, MA 01063", 4));
+        myMap.addBuilding(new Building("Smith Museum SCMA", "20 Elm St, Northampton, MA 01063", 2));
+        myMap.addBuilding(new Library("Hillyer Art Library", "20 Elm St, Northampton, MA 01063", 1));
+        myMap.addBuilding(new Building("Seelye Hall", "2 Seelye Dr, Northampton, MA 01063", 3));
+        myMap.addBuilding(new House("Chase-Duckett", "Lower Elm, Northampton, MA 01063", 3));
+        myMap.addBuilding(new House("Wilder", "1 Mandelle Rd, Northampton, MA 01063", 3));
+        myMap.addBuilding(new Building("Mendenhall", "122 Green St, Northampton, MA 01063", 4));
+        myMap.addBuilding(new Building("Burton Hall", "46 College Ln, Northampton, MA 01063", 4));
+        myMap.addBuilding(new Building("McConnell Hall", "2 Tyler Ct, Northampton, MA 01063", 4));
+        
         System.out.println(myMap);
     }
     
