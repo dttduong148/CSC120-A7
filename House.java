@@ -8,35 +8,27 @@ public class House extends Building {
   
   /* Default constructor */
   public House() {
-    this("<Name Unknown>", "<Address Unknown>", 1, false, false);
+    super();
   }
 
   /* Overloaded constructor with name, address, nFloors only */
   public House(String name, String address, int nFloors) {
-    this();
-    this.name = name;
-    this.address = address;
-    this.nFloors = nFloors;
+    super(name, address, nFloors);
   }
 
   /* Overloaded constructor with name, address, nFloors, hasDiningRoom only */
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
-    this();
-    this.name = name;
-    this.address = address;
-    this.nFloors = nFloors;
-    this.hasDiningRoom = hasDiningRoom;
+    super(name, address, nFloors, hasDiningRoom);
   }
 
-  
-
   /**
-   * Constructor of class House
+   * Full constructor of class House
    * @param name name of the House
    * @param address address of the House
    * @param nFloors number of floors in the House
    * @param hasDiningRoom whether the House has a dining hall or not
    */
+  
   public House(String name, String address, int nFloors, boolean hasElevator, boolean hasDiningRoom) {
     super(name, address, nFloors, hasElevator);
     this.residents = new ArrayList<String>();
