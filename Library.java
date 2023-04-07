@@ -153,48 +153,48 @@ public class Library extends Building {
   }
 
   public static void main(String[] args) {
-    Library Neilson = new Library("Neilson", "7 Neilson Drive, Northampton 01063", 4, true); 
-    Library Hillyer = new Library("Hillyer", "7 Neilson Drive, Northampton 01063", 2); 
+    Library neilson = new Library("Neilson", "7 Neilson Drive, Northampton 01063", 4, true); 
+    Library hillyer = new Library("Hillyer", "7 Neilson Drive, Northampton 01063", 2); 
 
-    Neilson.showOptions();
+    neilson.showOptions();
 
-    Neilson.addTitle("On Earth We're Briefly Gorgeous");
-    Neilson.addTitle("When Math Goes Wrong In The Real World");
-    Neilson.addTitle("20th Century Boy");
-    Neilson.addTitle("Sweet Reason");
-    Neilson.addTitle("Oliver Twist");
+    neilson.addTitle("On Earth We're Briefly Gorgeous");
+    neilson.addTitle("When Math Goes Wrong In The Real World");
+    neilson.addTitle("20th Century Boy");
+    neilson.addTitle("Sweet Reason");
+    neilson.addTitle("Oliver Twist");
 
     try {
-       Neilson.addTitle("Oliver Twist");
+       neilson.addTitle("Oliver Twist");
     } catch (Exception e) {
       System.err.println(e.getMessage());
     }
 
 
-    System.out.println(Neilson.removeTitle("20th Century Boy"));
+    System.out.println(neilson.removeTitle("20th Century Boy"));
 
     try {
-      Neilson.removeTitle("Introduction to Macroeconomics");
+      neilson.removeTitle("Introduction to Macroeconomics");
     } catch (Exception e) {
      System.err.println(e.getMessage());
     }
 
 
-    Neilson.printCollection();
+    neilson.printCollection();
 
-    Neilson.checkOut("On Earth We're Briefly Gorgeous");
-    Neilson.checkOut("Sweet Reason");
-    Neilson.checkOut("Sweet Reason");
-    Neilson.returnBook("Sweet Reason");
+    neilson.checkOut("On Earth We're Briefly Gorgeous");
+    neilson.checkOut("Sweet Reason");
+    neilson.checkOut("Sweet Reason");
+    neilson.returnBook("Sweet Reason");
 
-    Neilson.printCollection(true);
+    neilson.printCollection(true);
 
-    Neilson.enter();
-    Neilson.goToFloor(3);
-    Neilson.goToFloor(5);
+    neilson.enter();
+    neilson.goToFloor(3);
+    neilson.goToFloor(5);
 
-    Hillyer.enter();
-    Hillyer.goToFloor(2);
+    hillyer.enter();
+    hillyer.goToFloor(2);
 
 
   }

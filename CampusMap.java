@@ -56,7 +56,9 @@ public class CampusMap {
         myMap.addBuilding(new Building("Mendenhall", "122 Green St, Northampton, MA 01063", 4));
         myMap.addBuilding(new Building("Burton Hall", "46 College Ln, Northampton, MA 01063", 4));
         myMap.addBuilding(new Building("McConnell Hall", "2 Tyler Ct, Northampton, MA 01063", 4));
-        
+        myMap.addBuilding(new Cafe("CC Cafe", "10 Elm St", 1, false,
+        5000, 1000, 7000, 1000));
+
         System.out.println(myMap);
     }
     

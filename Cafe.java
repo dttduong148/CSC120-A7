@@ -93,13 +93,13 @@ public class Cafe extends Building {
     }
 
     public static void main(String[] args) {
-        Cafe Compass = new Cafe("Compass", "Neilson Drive", 1, false,
+        Cafe compass = new Cafe("Compass", "Neilson Drive", 1, false,
         5000, 1000, 7000, 1000);
 
-        Compass.showOptions();
+        compass.showOptions();
 
-        Compass.enter();
-        Compass.goToFloor(2);
+        compass.enter();
+        compass.goToFloor(2);
 
         // while (true) {
         //     Compass.sellCoffee(5, 1, 7);

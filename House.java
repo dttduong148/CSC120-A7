@@ -134,44 +134,44 @@ public class House extends Building {
 }
 
   public static void main(String[] args) {
-    House Ziskind = new House("Ziskind", "1 Henshaw Ave Northampton 01063", 3, true, true);
-    House Lamont = new House("Lamont", "Prospect Street Northampton 01063", 4, true, true);
-    House Jordan = new House("Jordan", "The Quad", 4);
-    House Haven = new House("Haven", "Mountain Neighborhood", 2);
+    House ziskind = new House("Ziskind", "1 Henshaw Ave Northampton 01063", 3, true, true);
+    House lamont = new House("Lamont", "Prospect Street Northampton 01063", 4, true, true);
+    House jordan = new House("Jordan", "The Quad", 4);
+    House haven = new House("Haven", "Mountain Neighborhood", 2);
   
-    Ziskind.showOptions();
-    System.out.println("*********" + Haven);
+    ziskind.showOptions();
+    System.out.println("*********" + haven);
 
-    System.out.println(Ziskind);
-    System.out.println(Lamont);
-    System.out.println(Jordan);
+    System.out.println(ziskind);
+    System.out.println(lamont);
+    System.out.println(jordan);
 
-    Ziskind.moveIn("Tana");
-    Ziskind.moveIn("Robbie");
-    Ziskind.moveOut("Robbie");
+    ziskind.moveIn("Tana");
+    ziskind.moveIn("Robbie");
+    ziskind.moveOut("Robbie");
 
 
-    Lamont.moveIn("Angela");
-    Lamont.moveIn("Sarah");
+    lamont.moveIn("Angela");
+    lamont.moveIn("Sarah");
     
-    Jordan.moveIn("Linh");
-    Jordan.moveOut("Linh");
+    jordan.moveIn("Linh");
+    jordan.moveOut("Linh");
 
 
     String[] names = {"Grace", "Alice", "Jess" };
-    Haven.moveIn(names);
+    haven.moveIn(names);
 
     try {
-      Lamont.moveOut("Marry");
+      lamont.moveOut("Marry");
     } catch (Exception e) {
       System.err.println(e.getMessage());
     }
 
-    System.out.println(Lamont.nResidents());
+    System.out.println(lamont.nResidents());
 
-    Ziskind.goToFloor(2);
-    Ziskind.goToFloor(5);
-    Haven.goToFloor(2);
+    ziskind.goToFloor(2);
+    ziskind.goToFloor(5);
+    haven.goToFloor(2);
   }
 
 }
