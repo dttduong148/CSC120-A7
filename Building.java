@@ -9,6 +9,7 @@ public class Building {
     /* Default constructor */
     public Building() {
         this("<Name Unknown>", "<Address Unknown>", 1, false);
+        
     }
 
     /* Overloaded constructor with address only */
@@ -33,8 +34,9 @@ public class Building {
         if (nFloors < 1) {
             throw new RuntimeException("Cannot construct a building with fewer than 1 floor.");
         }
-        this.hasElevator = hasElevator; 
         this.nFloors = nFloors;
+        this.hasElevator = hasElevator; 
+        
     }
 
     /* Accessors */
@@ -114,8 +116,9 @@ public class Building {
         fordHall.enter();
         fordHall.goUp();
         fordHall.goDown();
+        fordHall.goToFloor(5);
         fordHall.exit();
+    
     }
-
 }
 

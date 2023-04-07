@@ -14,11 +14,13 @@ public class House extends Building {
   /* Overloaded constructor with name, address, nFloors only */
   public House(String name, String address, int nFloors) {
     super(name, address, nFloors);
+    this.residents = new ArrayList<String>();
   }
 
   /* Overloaded constructor with name, address, nFloors, hasDiningRoom only */
   public House(String name, String address, int nFloors, boolean hasDiningRoom) {
     super(name, address, nFloors, hasDiningRoom);
+    this.residents = new ArrayList<String>();
   }
 
   /**
@@ -81,6 +83,20 @@ public class House extends Building {
   }
 
   /**
+  * Add multiple persons to the House
+  * @param names array of names
+  */
+  public void moveIn(String[] names) {
+    for (String name : names) {
+      if (!this.residents.contains(name)) {
+        this.residents.add(name);
+        System.out.println(name + " just became a new resident of " + this.name + ".");
+      }
+    }
+  }
+
+
+  /**
    * Remove a person from the House
    * @param name
    * @return name of the person that moved out
@@ -134,11 +150,16 @@ public class House extends Building {
     Ziskind.moveIn("Robbie");
     Ziskind.moveOut("Robbie");
 
+
     Lamont.moveIn("Angela");
     Lamont.moveIn("Sarah");
     
     Jordan.moveIn("Linh");
     Jordan.moveOut("Linh");
+
+
+    String[] names = {"Grace", "Alice", "Jess" };
+    Haven.moveIn(names);
 
     try {
       Lamont.moveOut("Marry");
@@ -147,6 +168,10 @@ public class House extends Building {
     }
 
     System.out.println(Lamont.nResidents());
+
+    Ziskind.goToFloor(2);
+    Ziskind.goToFloor(5);
+    Haven.goToFloor(2);
   }
 
 }

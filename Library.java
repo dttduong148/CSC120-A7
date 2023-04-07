@@ -8,10 +8,11 @@ public class Library extends Building {
   
 
   /**
-   * Constructor for class Library
+   * Full constructor for class Library
    * @param name
    * @param address
    * @param nFloors
+   * @param hasElevator
    */
   public Library(String name, String address, int nFloors, boolean hasElevator) {
     super(name, address, nFloors, hasElevator);
@@ -19,6 +20,12 @@ public class Library extends Building {
     System.out.println("You have built a library: 📖");
   }
 
+  /**
+   * Constructor for class Library with no elevator by default
+   * @param name
+   * @param address
+   * @param nFloors
+   */
   public Library(String name, String address, int nFloors) {
     super(name, address, nFloors);
     this.collection = new Hashtable<String, Boolean>();
@@ -79,7 +86,7 @@ public class Library extends Building {
   } 
 
   /**
-   * Method to check out a book and hange its status 
+   * Method to check out a book and change its status 
    * @param title
    */
   public void checkOut(String title) {
@@ -114,6 +121,22 @@ public class Library extends Building {
       System.out.println(x + ". " + key);
     }
   }
+
+  /**
+   * Print out only available books in the collection
+   * @param status
+   */
+  public void printCollection(boolean status) {
+    System.out.println("***** AVAILABLE FOR CHECK-OUT *****");
+
+    Set<String> keys = this.collection.keySet();
+    for (String key : keys) {
+     boolean value = this.collection.get(key);
+       if (value == status) {
+        System.out.println(key);
+      }
+    }
+  }
   
   public void showOptions() {
     super.showOptions();
@@ -131,6 +154,7 @@ public class Library extends Building {
 
   public static void main(String[] args) {
     Library Neilson = new Library("Neilson", "7 Neilson Drive, Northampton 01063", 4, true); 
+    Library Hillyer = new Library("Hillyer", "7 Neilson Drive, Northampton 01063", 2); 
 
     Neilson.showOptions();
 
@@ -157,10 +181,21 @@ public class Library extends Building {
 
 
     Neilson.printCollection();
+
     Neilson.checkOut("On Earth We're Briefly Gorgeous");
     Neilson.checkOut("Sweet Reason");
     Neilson.checkOut("Sweet Reason");
     Neilson.returnBook("Sweet Reason");
+
+    Neilson.printCollection(true);
+
+    Neilson.enter();
+    Neilson.goToFloor(3);
+    Neilson.goToFloor(5);
+
+    Hillyer.enter();
+    Hillyer.goToFloor(2);
+
 
   }
 }
